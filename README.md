@@ -1,3 +1,6 @@
+Nginx + PHP-FPM + MySQL + Redis docker-compose
+
+
 Для запуска окружения, выполнения команлд можно исползовать bash скрипт 
 sh app в корне приложения
 
@@ -8,11 +11,3 @@ sh app up [-d] запустить окружение
 sh app down завершить работу окружения
 sh app bash режим командной строки внутри окружения
 sh app composer запуск composer
-
-Скопировать содержимое файлв .env.example в .env
-
-Для заполнения бд тестовыми данными 
-php yii init 
-
-Для парсинга яндекса 
-php yii yandex
