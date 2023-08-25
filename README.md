@@ -15,3 +15,9 @@ sh app down завершить работу окружения
 sh app bash режим командной строки внутри окружения 
 
 sh app composer запуск composer 
+
+sh app build собрать окружение
+
+sh app nodejs окружение node js
+
+sh app npm выполнить npm команду
