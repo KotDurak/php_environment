@@ -46,3 +46,15 @@ services:
     links:
       - db
       - redis
+  nodejs:
+    image: node:18-alpine
+    working_dir: /app
+    restart: always
+    stdin_open: true
+    ports:
+      - "${NODEJS_PORT}:3000"
+    volumes:
+      - ${SRC_ROOT}:/app
+    links:
+      - db
+      - redis

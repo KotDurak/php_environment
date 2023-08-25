@@ -9,6 +9,8 @@ then
   echo "sh app bash режим командной строки внутри окружения"
   echo "sh app composer запуск composer"
   echo "sh app build собрать окружение"
+  echo "sh app nodejs окружение node js"
+  echo "sh app npm выполнить npm команду"
 exit
 fi
 
@@ -40,4 +42,14 @@ fi
 if [ $1 = 'bash' ]
 then
   docker-compose -f  ./docker/docker-compose.yml exec php bash
+fi
+
+if [ $1 = 'nodejs' ]
+then
+  docker exec -it docker_nodejs_1 /bin/sh
+fi
+
+if [ $1 = 'npm' ]
+then
+  docker-compose -f  ./docker/docker-compose.yml exec nodejs "$@"
 fi
